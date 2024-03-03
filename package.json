@@ -25,8 +25,8 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"scripts": {
-		"migration": "typeorm migration:create \"./src/migration/\" -- -n",
-		"migration2": "typeorm migration:create \"./src/migration/\" -- -n",
+		"start": "node build/src/server.js",
+		"build": "tsc -p tsconfig.json",
 		"typeorm": "typeorm-ts-node-commonjs"
 	},
 	"author": "",

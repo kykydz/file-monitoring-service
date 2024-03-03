@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "9416f27c-3efd-409f-ab50-713fd7e94bac",
+		"name": "Upload File Sample",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4322521"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"koko\",\r\n    \"quota\":6000000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"koko\",\r\n    \"quota\":6000000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "164"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a4-QHCGV0Fg7AwSUDo7tmHPAzaq2GE\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 Mar 2024 07:04:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"b53ee8be-7b79-4924-a67c-ea09daea0e48\",\n    \"name\": \"koko\",\n    \"quota\": 6000000,\n    \"quota_used\": 0,\n    \"created\": \"2024-03-03T07:04:42.000Z\",\n    \"updated\": \"2024-03-03T07:04:42.000Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Upload File",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/kyky/Pictures/time.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/file/:user_id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"file",
+						":user_id"
+					],
+					"variable": [
+						{
+							"key": "user_id",
+							"value": "380357b1-e61a-4536-bd8e-8898dfaf1672"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/kyky/Pictures/time.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/file/:user_id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"file",
+								":user_id"
+							],
+							"variable": [
+								{
+									"key": "user_id",
+									"value": "380357b1-e61a-4536-bd8e-8898dfaf1672"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "411"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"19b-Fpz3sGv/BmjtyORTm5LP7qrsKZ8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 03 Mar 2024 07:03:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"f668c471-61b4-41ed-b7b2-cb370fe70522\",\n    \"name\": \"time.jpg\",\n    \"path\": \"https://awss3.mock.com/my/files/380357b1-e61a-4536-bd8e-8898dfaf1672/time.jpg\",\n    \"size\": 1571638,\n    \"user\": {\n        \"quota\": 6000000,\n        \"quota_used\": 0,\n        \"id\": \"380357b1-e61a-4536-bd8e-8898dfaf1672\",\n        \"name\": \"kiki\",\n        \"created\": \"2024-03-03T06:11:44.000Z\",\n        \"updated\": \"2024-03-03T06:11:44.000Z\"\n    },\n    \"created\": \"2024-03-03T07:03:24.000Z\",\n    \"updated\": \"2024-03-03T07:03:24.000Z\"\n}"
+				}
+			]
+		}
+	]
+}
